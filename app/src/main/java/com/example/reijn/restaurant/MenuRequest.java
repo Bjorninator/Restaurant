@@ -32,7 +32,7 @@ public class MenuRequest implements Response.Listener<JSONObject>, Response.Erro
 
             for (int i = 0; i < categories.length(); i++) {
                 JSONObject object = categories.getJSONObject(i);
-                MenuItem item = new MenuItem(object.getDouble("price"),object.getString("name"),
+                MenuItem item = new MenuItem(object.getString("price"),object.getString("name"),
                         object.getString("description"),object.getString("image_url"),object.getString("category"));
                 System.out.println(item.getName());
                 list.add(item);

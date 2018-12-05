@@ -28,8 +28,7 @@ public class MenuActivity extends AppCompatActivity implements MenuRequest.Callb
 
     @Override
     public void gotMenus(ArrayList<MenuItem> categories) {
-        Toast.makeText(this, categories.get(0).getName(), Toast.LENGTH_SHORT).show();
-        adapter = new MenuAdapter(this, R.layout.categorie_row, categories);
+        adapter = new MenuAdapter(this, categories);
         ListView listview = (ListView) findViewById(R.id.listview);
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new OnItemClickListener());
@@ -43,9 +42,12 @@ public class MenuActivity extends AppCompatActivity implements MenuRequest.Callb
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            String categorie = (String) parent.getItemAtPosition(position);
-            Intent intent = new Intent(MenuActivity.this, MenuActivity.class);
-            intent.putExtra("categorie", categorie);
+            MenuItem categorie = (MenuItem) parent.getItemAtPosition(position);
+            Intent intent = new Intent(MenuActivity.this, DetailActivity.class);
+            intent.putExtra("name", categorie.getName());
+            intent.putExtra("description", categorie.getDescription());
+            intent.putExtra("url", categorie.getImageurl());
+            intent.putExtra("price", categorie.getPrice());
             startActivity(intent);
         }
     }

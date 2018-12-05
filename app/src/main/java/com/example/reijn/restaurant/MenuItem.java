@@ -1,10 +1,9 @@
 package com.example.reijn.restaurant;
 
 public class MenuItem {
-    private double price;
-    private String name,description,imageurl, category;
+    private String name,description,imageurl, category, price;
 
-    public MenuItem(double price, String name, String description, String imageurl, String category) {
+    public MenuItem(String price, String name, String description, String imageurl, String category) {
         this.price = price;
         this.name = name;
         this.description = description;
@@ -12,7 +11,7 @@ public class MenuItem {
         this.category = category;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -32,7 +31,7 @@ public class MenuItem {
         this.category = category;
     }
 
-    public double getPrice() {
+    public String getPrice() {
 
         return price;
     }

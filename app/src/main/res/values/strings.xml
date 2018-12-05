@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">restaurant</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
 </resources>
