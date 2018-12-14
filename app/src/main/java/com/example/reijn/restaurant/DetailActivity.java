@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
 
         namevak.setText(name);
         descriptionvak.setText(description);
-        pricevak.setText(price);
+        pricevak.setText("$ " + price);
         Picasso.get().load(url).resize(350,350).error(R.drawable.octodab).into(view);
 
 

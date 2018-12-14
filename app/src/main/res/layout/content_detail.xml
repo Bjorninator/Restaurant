@@ -11,17 +11,17 @@
     <TextView
         android:id="@+id/title1"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="46dp"
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="18sp" />
+        android:textSize="36sp" />
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
-        android:layout_height="162dp"
+        android:layout_height="195dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:fontFamily="sans-serif"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="12sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/price1"
@@ -44,5 +44,5 @@
         android:fontFamily="sans-serif"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="12sp" />
+        android:textSize="30sp" />
 </LinearLayout>

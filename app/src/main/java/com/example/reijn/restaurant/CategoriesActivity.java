@@ -22,7 +22,6 @@ public class CategoriesActivity extends AppCompatActivity implements CategoriesR
     }
     @Override
     public void gotCategories(ArrayList<String> categories) {
-        Toast.makeText(this,categories.get(0), Toast.LENGTH_SHORT).show();
         adapter = new CategorieAdapter(this,R.layout.categorie_row, categories);
         ListView listview = (ListView) findViewById(R.id.listview);
         listview.setAdapter(adapter);
